@@ -22,17 +22,17 @@ int main()
 		while(ch != 13){
 			if(sel == 0){
 				SetConsoleCursorPosition(hConsole, zero);
-				//Intro();
+				Intro();
 				Main_Menu_1();
 			}
 			if(sel == 1){
 				SetConsoleCursorPosition(hConsole, zero);
-				//Intro();
+				Intro();
 				Main_Menu_2();
 			}
 			if(sel == 2){
 				SetConsoleCursorPosition(hConsole, zero);
-				//Intro();
+				Intro();
 				Main_Menu_3();
 			}
 			ch = getch();
@@ -49,6 +49,10 @@ int main()
 				sel = 0;
 			}
 		}
+		if(sel == 0){
+			Select_Theme();
+		}
 	}
+	
 	return 0;
 }
