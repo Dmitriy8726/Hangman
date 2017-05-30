@@ -29,4 +29,20 @@ void WinLoseMenu_1();
 
 void WinLoseMenu_2();
 
+void Man();
+
+void Man_0();
+
+void Man_1();
+
+void Man_2();
+
+void Man_3();
+
+void Man_4();
+
+void Man_5();
+
+void Man_6();
+
 #endif
