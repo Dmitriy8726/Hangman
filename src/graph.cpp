@@ -64,7 +64,7 @@ void Main_Menu_1()
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                -> Новая игра                                                         " << endl;
+	cout << "                                                -> Новая sosi                                                         " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
