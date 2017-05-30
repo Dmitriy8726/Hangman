@@ -1,10 +1,6 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#include <iostream>
-
-using namespace std;
-
 void Intro();
 
 void Main_Menu_1();

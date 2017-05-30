@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 void Intro()
 {
 	cout << "                                                                                                                  " << endl;
@@ -28,7 +32,7 @@ void YouWin()
 	cout << "      |  |        | |     | |     | |      | |            \\  \\    / /  \\ \\    /  /      |  |    | |        | |    " << endl;
 	cout << "      |  |        | |     | |     | |      | |             \\  \\  / /    \\ \\  /  /       |  |    | |        | |    " << endl;
 	cout << "      |  |        | |_____| |      \\ \\____/  \\              \\  \\/ /      \\ \\/  /        |  |    | |        | |    " << endl;
-	cout << "      |__|        |_________|       \______/\\_\\              \\___/        \\___/         |__|    |_|        |_|    " << endl;
+	cout << "      |__|        |_________|       \\______/\\_\\              \\___/        \\___/         |__|    |_|        |_|    " << endl;
 	cout << "                                                                                                                  " << endl;
 	cout << "                                                                                                                  " << endl;
 	cout << "                                                                                                                  " << endl;
@@ -149,7 +153,6 @@ void Theme_Menu_1()
 }
 
 void Theme_Menu_2()
-{
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
