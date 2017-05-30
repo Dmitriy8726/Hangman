@@ -1,3 +1,6 @@
+#ifndef GRAPH_H
+#define GRAPH_H
+
 #include <iostream>
 
 using namespace std;
@@ -26,3 +29,4 @@ void WinLoseMenu_1();
 
 void WinLoseMenu_2();
 
+#endif
