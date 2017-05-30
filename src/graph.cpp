@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 void Intro()
 {
 	cout << "                                                                                                                  " << endl;
@@ -60,22 +61,15 @@ void Main_Menu_1()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
+	cout << "                                                -> Новая игра                                                         " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                -> РќРѕРІР°СЏ РёРіСЂР°                                                         " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                    РЎРїСЂР°РІРєР°                                                           " << endl;
+	cout << "                                                    Справка                                                           " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                     Р’С‹С…РѕРґ                                                            " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                                                     Выход                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -84,22 +78,15 @@ void Main_Menu_2()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
+	cout << "                                                   Новая игра                                                         " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                   РќРѕРІР°СЏ РёРіСЂР°                                                         " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                ->  РЎРїСЂР°РІРєР°                                                           " << endl;
+	cout << "                                                ->  Справка                                                           " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                     Р’С‹С…РѕРґ                                                            " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                                                     Выход                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -108,22 +95,15 @@ void Main_Menu_3()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
+	cout << "                                                   Новая игра                                                         " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                   РќРѕРІР°СЏ РёРіСЂР°                                                         " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                    РЎРїСЂР°РІРєР°                                                           " << endl;
+	cout << "                                                    Справка                                                           " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                ->   Р’С‹С…РѕРґ                                                            " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                                                ->   Выход                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -132,22 +112,14 @@ void Theme_Menu_1()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                   ->   РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ                               РљРѕРјРїСѓС‚РёСЂ                                       " << endl;
+	cout << "                   ->   Программирование                               Компутир                                       " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                          РЎРѕСЂС‚РёСЂРѕРІРєРё                                   Р”РёСЃРєСЂРµС‚РєР°                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                          Сортировка                                   Дискретка                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -156,22 +128,14 @@ void Theme_Menu_2()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                        РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ                               РљРѕРјРїСѓС‚РёСЂ                                       " << endl;
+	cout << "                        Программирование                               Компутир                                       " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                   ->     РЎРѕСЂС‚РёСЂРѕРІРєРё                                   Р”РёСЃРєСЂРµС‚РєР°                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                   ->     Сортировка                                   Дискретка                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -180,22 +144,14 @@ void Theme_Menu_3()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                        РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ                          ->   РљРѕРјРїСѓС‚РёСЂ                                       " << endl;
+	cout << "                        Программирование                          ->   Компутир                                       " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                          РЎРѕСЂС‚РёСЂРѕРІРєРё                                   Р”РёСЃРєСЂРµС‚РєР°                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                          Сортировка                                   Дискретка                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -204,22 +160,14 @@ void Theme_Menu_4()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                        РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ                               РљРѕРјРїСѓС‚РёСЂ                                       " << endl;
+	cout << "                        Программирование                               Компутир                                       " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                          РЎРѕСЂС‚РёСЂРѕРІРєРё                              ->   Р”РёСЃРєСЂРµС‚РєР°                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                          Сортировка                              ->   Дискретка                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -228,21 +176,14 @@ void WinLoseMenu_1()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                             ->   РќРѕРІР°СЏ РёРіСЂР°                                                          " << endl;
+	cout << "                                             ->   Новая Игра                                                          " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                 Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ                                                         " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                                                 Главное меню                                                         " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -251,29 +192,20 @@ void WinLoseMenu_2()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                  РќРѕРІР°СЏ РёРіСЂР°                                                          " << endl;
+	cout << "                                                  Новая игра                                                          " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                             ->  Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ                                                         " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
+	cout << "                                             ->  Главное меню                                                         " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
 
 void Man_0()
 {
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
 	cout << "                                             _____________                                                            " << endl;
 	cout << "                                             |          ||                                                            " << endl;
 	cout << "                                            _|_         ||                                                            " << endl;
@@ -290,8 +222,6 @@ void Man_0()
 
 void Man_1()
 {
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
 	cout << "                                             _____________                                                            " << endl;
 	cout << "                                             |          ||                                                            " << endl;
 	cout << "                                            _|_         ||                                                            " << endl;
@@ -308,8 +238,6 @@ void Man_1()
 
 void Man_2()
 {
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
 	cout << "                                             _____________                                                            " << endl;
 	cout << "                                             |          ||                                                            " << endl;
 	cout << "                                            _|_         ||                                                            " << endl;
@@ -326,8 +254,6 @@ void Man_2()
 
 void Man_3()
 {
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
 	cout << "                                             _____________                                                            " << endl;
 	cout << "                                             |          ||                                                            " << endl;
 	cout << "                                            _|_         ||                                                            " << endl;
@@ -344,8 +270,6 @@ void Man_3()
 
 void Man_4()
 {
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
 	cout << "                                             _____________                                                            " << endl;
 	cout << "                                             |          ||                                                            " << endl;
 	cout << "                                            _|_         ||                                                            " << endl;
@@ -362,8 +286,6 @@ void Man_4()
 
 void Man_5()
 {
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
 	cout << "                                             _____________                                                            " << endl;
 	cout << "                                             |          ||                                                            " << endl;
 	cout << "                                            _|_         ||                                                            " << endl;
@@ -380,8 +302,6 @@ void Man_5()
 
 void Man_6()
 {
-	cout << "                                                                                                                      " << endl;
-	cout << "                                                                                                                      " << endl;
 	cout << "                                             _____________                                                            " << endl;
 	cout << "                                             |          ||                                                            " << endl;
 	cout << "                                            _|_         ||                                                            " << endl;
