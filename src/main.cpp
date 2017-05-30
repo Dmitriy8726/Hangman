@@ -16,7 +16,7 @@ int main()
 	system("color 1f");
 	SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-	system("mode con cols=145 lines=50");
+	system("mode con cols=120 lines=30");
 	int sel = 0, ch = 0;
 	while (sel != 2) {
 		while(ch != 13){
