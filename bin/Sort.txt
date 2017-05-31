@@ -1,1 +1,1 @@
-слияние ставка шейкер шелл быстрая  
+merge quick insert select bubble
