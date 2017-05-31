@@ -5,6 +5,6 @@ int Select_Theme();
 
 void Testing_main(int theme);
 
-void Game();
+void Game(char slovo[], int dl);
 
 #endif
