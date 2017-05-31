@@ -77,6 +77,38 @@ int Select_Theme()
 	return theme;
 }
 
+void PrintSuares(int dl)
+{
+	int i = 0;
+	cout << "                  Загаданое слово:" << endl;
+	cout << "                  ";
+	for (i = 0; i < dl; i++) {
+		cout << "_____  ";
+	}
+	cout << endl;
+	cout << "                  ";
+	for (i = 0; i < dl; i++) {
+		cout << "| _ |  ";
+	}
+	cout << endl;
+	cout << "                  ";
+	for (i = 0; i < dl; i++) {
+		cout << "|___|  ";
+	}
+	cout << endl << endl;
+	
+}
+
+void Game(char slovo[], int dl)
+{
+	while (1) {
+	SetConsoleCursorPosition(hConsole, zero);
+	Man_0();
+	PrintSuares(dl);
+	getch();
+	}
+}
+
 void Testing_main(int theme)
 {
 	srand(time(0));
@@ -134,15 +166,4 @@ void Testing_main(int theme)
 		break;
 		}
 	}
-}
-
-void Game(char slovo[], int dl)
-{
-	
-	
-}
-
-void PrintSuares()
-{
-	
 }

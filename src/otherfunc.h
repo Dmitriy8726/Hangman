@@ -7,4 +7,6 @@ void Testing_main(int theme);
 
 void Game(char slovo[], int dl);
 
+void PrintSuares(int dl);
+
 #endif
