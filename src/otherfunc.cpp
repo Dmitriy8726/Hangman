@@ -1,10 +1,15 @@
 #include <iostream>
 #include <windows.h>
 #include <conio.h>
+#include <fstream>
+#include <ctime>
+#include <cstdlib>
 #include "graph.h"
 
 extern HANDLE hConsole;
 extern COORD zero;
+
+using namespace std;
 
 int Select_Theme()
 {
@@ -70,4 +75,59 @@ int Select_Theme()
 		theme = 4;
 	}
 	return theme;
+}
+
+void Testing_main(int theme)
+{
+	srand(time(0));
+	switch (theme) {
+		case 1: {
+		char slovo[10];
+		ifstream fin("Programm.txt");
+		if (!fin.is_open()) {
+			return;
+		}
+		for (int i = 1 + rand()%5;i>0;i--) {
+		fin >> slovo;
+		}
+		fin.close();
+		break;
+		}
+		case 2: {
+		char slovo[10];
+		ifstream fin("Chasti.txt");
+		if (!fin.is_open()) {
+			return;
+		}
+		for (int i = 1 + rand()%5;i>0;i--) {
+		fin >> slovo;
+		}
+		fin.close();
+		break;
+		}
+		case 3: {
+		char slovo[10];
+		ifstream fin("Sort.txt");
+		if (!fin.is_open()) {
+			return;
+		}
+		for (int i = 1 + rand()%5;i>0;i--) {
+		fin >> slovo;
+		}
+		fin.close();
+		break;
+		}
+		case 4: {
+		char slovo[10];
+		ifstream fin("Discretka.txt");
+		if (!fin.is_open()) {
+			return;
+		}
+		for (int i = 1 + rand()%5;i>0;i--) {
+		fin >> slovo;
+		}
+		fin.close();
+		break;
+		}
+	}
 }

@@ -50,9 +50,8 @@ int main()
 			}
 		}
 		if(sel == 0){
-			Select_Theme();
+			Testing_main(Select_Theme());
 		}
 	}
-	
 	return 0;
 }
