@@ -36,7 +36,7 @@ int Select_Theme()
 			Intro();
 			Theme_Menu_4();
 		}
-		ch = getch();
+		ch = getwch;
 		if (ch == 72) {
 			i--;
 		}
@@ -101,12 +101,35 @@ void PrintSuares(int dl)
 
 void Game(char slovo[], int dl)
 {
-	while (1) {
+	int i;
+	SHORT x_cons;
+	char letter;
 	SetConsoleCursorPosition(hConsole, zero);
 	Man_0();
 	PrintSuares(dl);
-	getch();
+	while (1) {
+		x_cons = 20;
+		letter = getch();
+		cout << letter;
+		system("PAUSE");
+		for (i = 0; i < dl; i++) {
+			if (letter == slovo[i]) {
+				COORD position = { x_cons,25 };
+				SetConsoleCursorPosition(hConsole, position);
+				cout << letter;
+				slovo[i] = 0;
+				x_cons+=7;
+			}
+			else {
+				COORD position = { x_cons,25 };
+				SetConsoleCursorPosition(hConsole, position);
+				x_cons += 7;
+			}		
+		}
 	}
+	
+	
+	
 }
 
 void Testing_main(int theme)

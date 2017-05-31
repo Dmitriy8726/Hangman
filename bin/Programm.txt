@@ -1,1 +1,1 @@
-код паскаль структура функция цикл 
+code pascal structure function loop

@@ -1,1 +1,1 @@
-граф множества семья сочетание эйлер
+graph sets family combination euler

@@ -61,15 +61,15 @@ void Main_Menu_1()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                -> Новая игра                                                         " << endl;
+	cout << "                                                ->  New game                                                          " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                    Справка                                                           " << endl;
+	cout << "                                                      Help                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                     Выход                                                            " << endl;
+	cout << "                                                      Exit                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -78,15 +78,15 @@ void Main_Menu_2()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                   Новая игра                                                         " << endl;
+	cout << "                                                    New game                                                          " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                ->  Справка                                                           " << endl;
+	cout << "                                                ->    Help                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                     Выход                                                            " << endl;
+	cout << "                                                      Exit                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -95,15 +95,15 @@ void Main_Menu_3()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                   Новая игра                                                         " << endl;
+	cout << "                                                    New game                                                          " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                    Справка                                                           " << endl;
+	cout << "                                                      Help                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                ->   Выход                                                            " << endl;
+	cout << "                                                ->    Exit                                                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -112,14 +112,14 @@ void Theme_Menu_1()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                   ->   Программирование                               Компутир                                       " << endl;
+	cout << "                     ->   Programming                                Parts of the computer                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                          Сортировка                                   Дискретка                                      " << endl;
+	cout << "                            Sorting                                      Discrete Math                                " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -128,14 +128,14 @@ void Theme_Menu_2()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                        Программирование                               Компутир                                       " << endl;
+	cout << "                          Programming                                Parts of the computer                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                   ->     Сортировка                                   Дискретка                                      " << endl;
+	cout << "                   ->       Sorting                                      Discrete Math                                " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -144,14 +144,14 @@ void Theme_Menu_3()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                        Программирование                          ->   Компутир                                       " << endl;
+	cout << "                          Programming                             -> Parts of the computer                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                          Сортировка                                   Дискретка                                      " << endl;
+	cout << "                            Sorting                                      Discrete Math                                " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -160,14 +160,14 @@ void Theme_Menu_4()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                        Программирование                               Компутир                                       " << endl;
+	cout << "                          Programming                                Parts of the computer                            " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                          Сортировка                              ->   Дискретка                                      " << endl;
+	cout << "                            Sorting                               ->     Discrete Math                                " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -176,14 +176,14 @@ void WinLoseMenu_1()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                             ->   Новая Игра                                                          " << endl;
+	cout << "                                             ->    New game                                                           " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                 Главное меню                                                         " << endl;
+	cout << "                                                   Main menu                                                          " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
@@ -192,14 +192,14 @@ void WinLoseMenu_2()
 {
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                                  Новая игра                                                          " << endl;
+	cout << "                                                   New game                                                          " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
-	cout << "                                             ->  Главное меню                                                         " << endl;
+	cout << "                                             ->    Main menu                                                         " << endl;
 	cout << "                                                                                                                      " << endl;
 	cout << "                                                                                                                      " << endl;
 }
