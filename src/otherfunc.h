@@ -3,5 +3,7 @@
 
 void Select_Theme();
 
+int Select_Theme();
+
 #endif
 
