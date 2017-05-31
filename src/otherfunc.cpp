@@ -91,6 +91,7 @@ void Testing_main(int theme)
 		fin >> slovo;
 		}
 		fin.close();
+		Game(slovo, strlen(slovo));
 		break;
 		}
 		case 2: {
@@ -103,6 +104,7 @@ void Testing_main(int theme)
 		fin >> slovo;
 		}
 		fin.close();
+		Game(slovo, strlen(slovo));
 		break;
 		}
 		case 3: {
@@ -115,6 +117,7 @@ void Testing_main(int theme)
 		fin >> slovo;
 		}
 		fin.close();
+		Game(slovo, strlen(slovo));
 		break;
 		}
 		case 4: {
@@ -127,13 +130,19 @@ void Testing_main(int theme)
 		fin >> slovo;
 		}
 		fin.close();
+		Game(slovo, strlen(slovo));
 		break;
 		}
 	}
 }
 
-void Game()
+void Game(char slovo[], int dl)
 {
 	
+	
+}
+
+void PrintSuares()
+{
 	
 }
