@@ -120,9 +120,20 @@ void PrintSuares(int dl)
 	
 }
 
+void WinMenu()
+{
+	
+}
+
+void LoseMenu()
+{
+	
+	
+}
+
 void Game(char slovo[], int dl)
 {
-	int i, chelov = 0,kol;
+	int i, chelov = 0, kol, win = 0;
 	SHORT x_cons;
 	int flag = 0;
 	COORD wr_word = { 11, 19 };
@@ -159,6 +170,7 @@ void Game(char slovo[], int dl)
 					slovo[i] = 0;
 					x_cons += 7;
 					flag = 1;
+					win++;
 				}
 				else {
 					COORD position = { x_cons,14 };
