@@ -5,6 +5,7 @@ using namespace std;
 
 COORD zero = { 0,0 };
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+int vibor = 0;
 
 int main()
 {
