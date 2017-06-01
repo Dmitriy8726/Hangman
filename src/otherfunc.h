@@ -18,6 +18,6 @@ void Game(char slovo[], int dl);
 
 void PrintSuares(int dl);
 
-int Proverka(char letter);
+int Proverka(char &letter);
 
 #endif
