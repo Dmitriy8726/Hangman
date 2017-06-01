@@ -10,12 +10,12 @@ int vibor = 0;
 int main()
 {
 	srand(time(0));
-	system("color 1f");
 	SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 	system("mode con cols=120 lines=30");
 	int sel = 0, ch = 0;
 	while (sel != 2) {
+		system("color 0f");
 		while (ch != 13) {
 			if (sel == 0) {
 				SetConsoleCursorPosition(hConsole, zero);

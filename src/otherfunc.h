@@ -20,7 +20,7 @@ void PrintSuares(int dl);
 
 int Proverka(char &letter);
 
-int Povtor(char letter,int *&C,int kol,char *A);
+int Povtor(char letter, int *&C, int kol, char *A);
 
 void WinMenu();
 
