@@ -1,0 +1,1 @@
+code pascal structure function loop

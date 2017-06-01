@@ -1,10 +1,11 @@
-#include <iostream>
-#include <windows.h>
-#include <conio.h>
+#include "otherfunc.h"
 #include "graph.h"
 
 extern HANDLE hConsole;
 extern COORD zero;
+extern int vibor;
+
+using namespace std;
 
 int Select_Theme()
 {
@@ -60,14 +61,308 @@ int Select_Theme()
 	if ((i == 0) && (j == 0)) {
 		theme = 1;
 	}
-	if ((i == 1) && (j == 0)) {
+	if ((i == 0) && (j == 1)) {
 		theme = 2;
 	}
-	if ((i == 0) && (j == 1)) {
+	if ((i == 1) && (j == 0)) {
 		theme = 3;
 	}
 	if ((i == 1) && (j == 1)) {
 		theme = 4;
 	}
 	return theme;
+}
+
+int Proverka(char &letter)
+{
+	if (isalpha(letter)) {
+			if (islower(letter)) {
+				return 1;
+			} else {
+				letter = tolower(letter);
+				return 1;
+			}
+	} else {
+		return 0;
+	}
+}
+
+int Povtor(char letter, int *&C, int kol, char *A)
+{
+	int i;
+	for (i = 0; i < kol; i++) {
+		if ((letter == A[i]) && (C[i] == 1)) {
+			C[i] = 0;
+			return 1;
+		}
+	}
+	return 0;
+}
+	
+void PrintSuares(int dl)
+{
+	int i = 0;
+	cout << "                  Amazing word:" << endl;
+	cout << "                  ";
+	for (i = 0; i < dl; i++) {
+		cout << "_____  ";
+	}
+	cout << endl;
+	cout << "                  ";
+	for (i = 0; i < dl; i++) {
+		cout << "| _ |  ";
+	}
+	cout << endl;
+	cout << "                  ";
+	for (i = 0; i < dl; i++) {
+		cout << "|___|  ";
+	}
+	cout << endl << endl;
+	
+}
+
+void WinMenu()
+{
+	int ch = 0;
+	system("color 2f");
+	system("cls");
+	while (ch != 13) {
+		switch (vibor) {
+			case 0: {
+				SetConsoleCursorPosition(hConsole, zero);
+				YouWin();
+				WinLoseMenu_1();
+				break;
+			}
+			case 1: {
+				SetConsoleCursorPosition(hConsole, zero);
+				YouWin();
+				WinLoseMenu_2();
+				break;
+			}
+		}
+		ch = getch();
+		if(ch == 72) {
+			vibor--;
+		}
+		if(vibor < 0) {
+			vibor = 1;
+		}
+		if(ch == 80) {
+			vibor++;
+		}
+		if(vibor > 1) {
+			vibor = 0;
+		}
+	}
+}
+
+void LoseMenu()
+{
+	int ch = 0;
+	system("color 4f");
+	system("cls");
+	while (ch != 13) {
+		switch (vibor) {
+			case 0: {
+				SetConsoleCursorPosition(hConsole, zero);
+				YouLose();
+				WinLoseMenu_1();
+				break;
+			}
+			case 1: {
+				SetConsoleCursorPosition(hConsole, zero);
+				YouLose();
+				WinLoseMenu_2();
+				break;
+			}
+		}
+		ch = getch();
+		if(ch == 72) {
+			vibor--;
+		}
+		if(vibor < 0) {
+			vibor = 1;
+		}
+		if(ch == 80) {
+			vibor++;
+		}
+		if(vibor > 1) {
+			vibor = 0;
+		}
+	}
+}
+
+void Game(char slovo[], int dl)
+{
+	int i, chelov = 0, kol, win = 0;
+	system("color 0f");
+	SHORT x_cons;
+	int flag = 0;
+	COORD wr_word = { 11, 19 };
+	char A[] = "abcdefghijklmnopqrstuvwxyz";
+	kol = strlen(A);
+	int *C = new int [kol];
+	int *B = new int [kol];
+	for (i = 0; i < kol; i++) {
+		B[i] = 1;
+		C[i] = 1;
+	}
+	char letter;
+	system ("CLS");
+	SetConsoleCursorPosition(hConsole, zero);
+	Man_0();
+	PrintSuares(dl);
+	while (1) {
+		if (win == dl) {
+			WinMenu();
+			break;
+		}
+		if (chelov == 6) {
+			LoseMenu();
+			break;
+		}
+		SetConsoleCursorPosition(hConsole, wr_word);
+		cout << "Wrong letters: ";
+		for (i = 0; i < kol; i++) {
+			if (B[i] == 0) {
+				cout << A[i] <<" ";
+			}
+		}
+		flag = 0;
+		x_cons = 20;
+		letter = getch();
+		if ((Proverka(letter) == 1) && (Povtor(letter,C,kol,A) == 1)) {
+			for (i = 0; i < dl; i++) {
+				if (letter == slovo[i]) {
+					COORD position = { x_cons,14 };
+					SetConsoleCursorPosition(hConsole, position);
+					cout << letter;
+					slovo[i] = 0;
+					x_cons += 7;
+					flag = 1;
+					win++;
+				}
+				else {
+					COORD position = { x_cons,14 };
+					SetConsoleCursorPosition(hConsole, position);
+					x_cons += 7;
+				}		
+			}
+		
+			if (flag == 0) {
+				Povtor(letter,B,kol,A);
+				++chelov;
+			}
+			switch (chelov) {
+				case 0: {
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_0();
+					break;
+				}
+				case 1: {
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_1();
+					break;
+				}
+				case 2: {
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_2();
+					break;
+				}
+				case 3: {
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_3();
+					break;
+				}
+				case 4: {
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_4();
+					break;
+				}
+				case 5: {
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_5();
+					break;
+				}
+				case 6: {
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_6();
+					break;
+				}	
+			}	
+		}
+	
+	
+	
+	
+	}
+	
+}
+
+void Testing_main(int theme)
+{
+	int i;
+	srand(time(0));
+	while (1) {
+		switch (theme) {
+			case 1: {
+			char slovo[10];
+			ifstream fin("Programm.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand() % 5; i > 0; i--) {
+			fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			case 2: {
+			char slovo[10];
+			ifstream fin("Chasti.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand() % 5 ; i > 0; i--) {
+				fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			case 3: {
+			char slovo[10];
+			ifstream fin("Sort.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand() % 5 ; i > 0; i--) {
+				fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			case 4: {
+			char slovo[10];
+			ifstream fin("Discretka.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand() % 5 ; i > 0; i--) {
+				fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			
+		}
+		if (vibor == 1) {
+			break;
+		}
+		vibor = 0;
+	}
 }
