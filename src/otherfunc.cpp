@@ -120,7 +120,7 @@ void PrintSuares(int dl)
 	
 }
 
-void WinMenu()
+int WinMenu()
 {
 	int ch = 0, vibor = 0;;
 	system("cls");
@@ -153,12 +153,10 @@ void WinMenu()
 			vibor = 0;
 		}
 	}
-	
-	
-	
+	return vibor;
 }
 
-void LoseMenu()
+int LoseMenu()
 {
 	int ch = 0, vibor = 0;;
 	system("cls");
@@ -191,14 +189,14 @@ void LoseMenu()
 			vibor = 0;
 		}
 	}
-	
+	return vibor;
 }
 
 void Game(char slovo[], int dl)
 {
 	int i, chelov = 0, kol, win = 0;
 	SHORT x_cons;
-	int flag = 0;
+	int flag = 0, flagng;
 	COORD wr_word = { 11, 19 };
 	char A[] = "abcdefghijklmnopqrstuvwxyz";
 	kol = strlen(A);
@@ -214,12 +212,17 @@ void Game(char slovo[], int dl)
 	Man_0();
 	PrintSuares(dl);
 	while (1) {
+		flagng = 0;
 		if (win == dl) {
-			WinMenu();
+			flagng = WinMenu();
 		}
 		if (chelov == 6) {
-			LoseMenu();
+			flagng = LoseMenu();
 		}
+		if (flagng == 1) {
+			break;
+		}
+		
 		SetConsoleCursorPosition(hConsole, wr_word);
 		cout << "Wrong letters: ";
 		for (i = 0; i < kol; i++) {
