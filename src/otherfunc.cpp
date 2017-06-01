@@ -86,6 +86,18 @@ int Proverka(char &letter)
 	}
 }
 
+int Povtor(char letter,int *&C,int kol,char *A)
+{
+	int i;
+	for (i = 0; i < kol; i++) {
+		if ((letter == A[i]) && (C[i] == 1)) {
+			C[i] = 0;
+			return 1;
+		}
+	}
+	return 0;
+}
+	
 void PrintSuares(int dl)
 {
 	int i = 0;
@@ -138,8 +150,7 @@ void Game(char slovo[], int dl)
 		flag = 0;
 		x_cons = 20;
 		letter = getch();
-		if (Proverka(letter) == 1) {
-			//for (i = 0;i < kol 
+		if ((Proverka(letter) == 1) && (Povtor(letter,C,kol,A) == 1)) {
 			for (i = 0; i < dl; i++) {
 				if (letter == slovo[i]) {
 					COORD position = { x_cons,14 };
@@ -157,11 +168,7 @@ void Game(char slovo[], int dl)
 			}
 		
 			if (flag == 0) {
-				for (i = 0;i < kol;i++) {
-					if (A[i] == letter) {
-						B[i] = 0;
-					}
-				}
+				Povtor(letter,B,kol,A);
 				++chelov;
 			}
 			switch (chelov) {
