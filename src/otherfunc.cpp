@@ -1,9 +1,4 @@
-#include <iostream>
-#include <windows.h>
-#include <conio.h>
-#include <fstream>
-#include <ctime>
-#include <cstdlib>
+#include "otherfunc.h"
 #include "graph.h"
 
 extern HANDLE hConsole;
@@ -77,6 +72,15 @@ int Select_Theme()
 	return theme;
 }
 
+int Proverka(char letter)
+{
+	if ((isalpha(letter)) && (islower(letter)) ) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
 void PrintSuares(int dl)
 {
 	int i = 0;
@@ -105,6 +109,7 @@ void Game(char slovo[], int dl)
 	SHORT x_cons;
 	int flag = 0;
 	char letter;
+	system ("CLS");
 	SetConsoleCursorPosition(hConsole, zero);
 	Man_0();
 	PrintSuares(dl);
@@ -112,63 +117,64 @@ void Game(char slovo[], int dl)
 		flag = 0;
 		x_cons = 20;
 		letter = getch();
-		for (i = 0; i < dl; i++) {
-			if (letter == slovo[i]) {
-				COORD position = { x_cons,14 };
-				SetConsoleCursorPosition(hConsole, position);
-				cout << letter;
-				slovo[i] = 0;
-				x_cons += 7;
-				flag = 1;
+		if (Proverka(letter) == 1) {
+			for (i = 0; i < dl; i++) {
+				if (letter == slovo[i]) {
+					COORD position = { x_cons,14 };
+					SetConsoleCursorPosition(hConsole, position);
+					cout << letter;
+					slovo[i] = 0;
+					x_cons += 7;
+					flag = 1;
+				}
+				else {
+					COORD position = { x_cons,14 };
+					SetConsoleCursorPosition(hConsole, position);
+					x_cons += 7;
+				}		
 			}
-			else {
-				COORD position = { x_cons,14 };
-				SetConsoleCursorPosition(hConsole, position);
-				x_cons += 7;
-			}		
-		}
-	
-		if (flag == 0) {
-			++chelov;
-		}
-		switch (chelov) {
-			case 0:{
-				SetConsoleCursorPosition(hConsole, zero);
-				Man_0();
-				break;
+		
+			if (flag == 0) {
+				++chelov;
 			}
-			case 1:{
-				SetConsoleCursorPosition(hConsole, zero);
-				Man_1();
-				break;
-			}
-			case 2:{
-				SetConsoleCursorPosition(hConsole, zero);
-				Man_2();
-				break;
-			}
-			case 3:{
-				SetConsoleCursorPosition(hConsole, zero);
-				Man_3();
-				break;
-			}
-			case 4:{
-				SetConsoleCursorPosition(hConsole, zero);
-				Man_4();
-				break;
-			}
-			case 5:{
-				SetConsoleCursorPosition(hConsole, zero);
-				Man_5();
-				break;
-			}
-			case 6:{
-				SetConsoleCursorPosition(hConsole, zero);
-				Man_6();
-				break;
+			switch (chelov) {
+				case 0:{
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_0();
+					break;
+				}
+				case 1:{
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_1();
+					break;
+				}
+				case 2:{
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_2();
+					break;
+				}
+				case 3:{
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_3();
+					break;
+				}
+				case 4:{
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_4();
+					break;
+				}
+				case 5:{
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_5();
+					break;
+				}
+				case 6:{
+					SetConsoleCursorPosition(hConsole, zero);
+					Man_6();
+					break;
+				}	
 			}	
-		}	
-	
+		}
 	
 	
 	

@@ -1,10 +1,5 @@
-#include <windows.h>
-#include <iostream>
-#include <conio.h>
-#include <ctime>
 #include "graph.h"
 #include "otherfunc.h"
-#include <clocale>
 
 using namespace std;
 
@@ -13,7 +8,6 @@ HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 int main()
 {
-	setlocale(LC_CTYPE, "rus");
 	srand(time(0));
 	system("color 1f");
 	SetConsoleCP(1251);
