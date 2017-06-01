@@ -3,6 +3,7 @@
 
 extern HANDLE hConsole;
 extern COORD zero;
+extern int vibor;
 
 using namespace std;
 
@@ -120,9 +121,79 @@ void PrintSuares(int dl)
 	
 }
 
+void WinMenu()
+{
+	int ch = 0;
+	system("cls");
+	while (ch != 13) {
+		switch (vibor) {
+			case 0:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouWin();
+				WinLoseMenu_1();
+				break;
+			}
+			case 1:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouWin();
+				WinLoseMenu_2();
+				break;
+			}
+		}
+		ch = getch();
+		if(ch == 72){
+			vibor--;
+		}
+		if(vibor < 0){
+			vibor = 1;
+		}
+		if(ch == 80){
+			vibor++;
+		}
+		if(vibor > 1){
+			vibor = 0;
+		}
+	}
+}
+
+void LoseMenu()
+{
+	int ch = 0;
+	system("cls");
+	while (ch != 13) {
+		switch (vibor) {
+			case 0:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouLose();
+				WinLoseMenu_1();
+				break;
+			}
+			case 1:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouLose();
+				WinLoseMenu_2();
+				break;
+			}
+		}
+		ch = getch();
+		if(ch == 72){
+			vibor--;
+		}
+		if(vibor < 0){
+			vibor = 1;
+		}
+		if(ch == 80){
+			vibor++;
+		}
+		if(vibor > 1){
+			vibor = 0;
+		}
+	}
+}
+
 void Game(char slovo[], int dl)
 {
-	int i, chelov = 0,kol;
+	int i, chelov = 0, kol, win = 0;
 	SHORT x_cons;
 	int flag = 0;
 	COORD wr_word = { 11, 19 };
@@ -140,6 +211,14 @@ void Game(char slovo[], int dl)
 	Man_0();
 	PrintSuares(dl);
 	while (1) {
+		if (win == dl) {
+			WinMenu();
+			break;
+		}
+		if (chelov == 6) {
+			LoseMenu();
+			break;
+		}
 		SetConsoleCursorPosition(hConsole, wr_word);
 		cout << "Wrong letters: ";
 		for (i = 0; i < kol; i++) {
@@ -159,6 +238,7 @@ void Game(char slovo[], int dl)
 					slovo[i] = 0;
 					x_cons += 7;
 					flag = 1;
+					win++;
 				}
 				else {
 					COORD position = { x_cons,14 };
@@ -219,59 +299,67 @@ void Game(char slovo[], int dl)
 
 void Testing_main(int theme)
 {
+	int i;
 	srand(time(0));
-	switch (theme) {
-		case 1: {
-		char slovo[10];
-		ifstream fin("Programm.txt");
-		if (!fin.is_open()) {
-			return;
+	while (1) {
+		switch (theme) {
+			case 1: {
+			char slovo[10];
+			ifstream fin("Programm.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand()%5;i>0;i--) {
+			fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			case 2: {
+			char slovo[10];
+			ifstream fin("Chasti.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand()%5;i>0;i--) {
+				fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			case 3: {
+			char slovo[10];
+			ifstream fin("Sort.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand()%5;i>0;i--) {
+				fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			case 4: {
+			char slovo[10];
+			ifstream fin("Discretka.txt");
+			if (!fin.is_open()) {
+				return;
+			}
+			for (i = 1 + rand()%5;i>0;i--) {
+				fin >> slovo;
+			}
+			fin.close();
+			Game(slovo, strlen(slovo));
+			break;
+			}
+			
 		}
-		for (int i = 1 + rand()%5;i>0;i--) {
-		fin >> slovo;
+		if (vibor == 1) {
+			break;
 		}
-		fin.close();
-		Game(slovo, strlen(slovo));
-		break;
-		}
-		case 2: {
-		char slovo[10];
-		ifstream fin("Chasti.txt");
-		if (!fin.is_open()) {
-			return;
-		}
-		for (int i = 1 + rand()%5;i>0;i--) {
-		fin >> slovo;
-		}
-		fin.close();
-		Game(slovo, strlen(slovo));
-		break;
-		}
-		case 3: {
-		char slovo[10];
-		ifstream fin("Sort.txt");
-		if (!fin.is_open()) {
-			return;
-		}
-		for (int i = 1 + rand()%5;i>0;i--) {
-		fin >> slovo;
-		}
-		fin.close();
-		Game(slovo, strlen(slovo));
-		break;
-		}
-		case 4: {
-		char slovo[10];
-		ifstream fin("Discretka.txt");
-		if (!fin.is_open()) {
-			return;
-		}
-		for (int i = 1 + rand()%5;i>0;i--) {
-		fin >> slovo;
-		}
-		fin.close();
-		Game(slovo, strlen(slovo));
-		break;
-		}
+		vibor = 0;
 	}
 }
