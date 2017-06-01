@@ -87,7 +87,7 @@ int Proverka(char &letter)
 	}
 }
 
-int Povtor(char letter,int *&C,int kol,char *A)
+int Povtor(char letter, int *&C, int kol, char *A)
 {
 	int i;
 	for (i = 0; i < kol; i++) {
@@ -124,16 +124,17 @@ void PrintSuares(int dl)
 void WinMenu()
 {
 	int ch = 0;
+	system("color 2f");
 	system("cls");
 	while (ch != 13) {
 		switch (vibor) {
-			case 0:{
+			case 0: {
 				SetConsoleCursorPosition(hConsole, zero);
 				YouWin();
 				WinLoseMenu_1();
 				break;
 			}
-			case 1:{
+			case 1: {
 				SetConsoleCursorPosition(hConsole, zero);
 				YouWin();
 				WinLoseMenu_2();
@@ -141,16 +142,16 @@ void WinMenu()
 			}
 		}
 		ch = getch();
-		if(ch == 72){
+		if(ch == 72) {
 			vibor--;
 		}
-		if(vibor < 0){
+		if(vibor < 0) {
 			vibor = 1;
 		}
-		if(ch == 80){
+		if(ch == 80) {
 			vibor++;
 		}
-		if(vibor > 1){
+		if(vibor > 1) {
 			vibor = 0;
 		}
 	}
@@ -159,16 +160,17 @@ void WinMenu()
 void LoseMenu()
 {
 	int ch = 0;
+	system("color 4f");
 	system("cls");
 	while (ch != 13) {
 		switch (vibor) {
-			case 0:{
+			case 0: {
 				SetConsoleCursorPosition(hConsole, zero);
 				YouLose();
 				WinLoseMenu_1();
 				break;
 			}
-			case 1:{
+			case 1: {
 				SetConsoleCursorPosition(hConsole, zero);
 				YouLose();
 				WinLoseMenu_2();
@@ -176,16 +178,16 @@ void LoseMenu()
 			}
 		}
 		ch = getch();
-		if(ch == 72){
+		if(ch == 72) {
 			vibor--;
 		}
-		if(vibor < 0){
+		if(vibor < 0) {
 			vibor = 1;
 		}
-		if(ch == 80){
+		if(ch == 80) {
 			vibor++;
 		}
-		if(vibor > 1){
+		if(vibor > 1) {
 			vibor = 0;
 		}
 	}
@@ -194,6 +196,7 @@ void LoseMenu()
 void Game(char slovo[], int dl)
 {
 	int i, chelov = 0, kol, win = 0;
+	system("color 0f");
 	SHORT x_cons;
 	int flag = 0;
 	COORD wr_word = { 11, 19 };
@@ -252,37 +255,37 @@ void Game(char slovo[], int dl)
 				++chelov;
 			}
 			switch (chelov) {
-				case 0:{
+				case 0: {
 					SetConsoleCursorPosition(hConsole, zero);
 					Man_0();
 					break;
 				}
-				case 1:{
+				case 1: {
 					SetConsoleCursorPosition(hConsole, zero);
 					Man_1();
 					break;
 				}
-				case 2:{
+				case 2: {
 					SetConsoleCursorPosition(hConsole, zero);
 					Man_2();
 					break;
 				}
-				case 3:{
+				case 3: {
 					SetConsoleCursorPosition(hConsole, zero);
 					Man_3();
 					break;
 				}
-				case 4:{
+				case 4: {
 					SetConsoleCursorPosition(hConsole, zero);
 					Man_4();
 					break;
 				}
-				case 5:{
+				case 5: {
 					SetConsoleCursorPosition(hConsole, zero);
 					Man_5();
 					break;
 				}
-				case 6:{
+				case 6: {
 					SetConsoleCursorPosition(hConsole, zero);
 					Man_6();
 					break;
@@ -309,7 +312,7 @@ void Testing_main(int theme)
 			if (!fin.is_open()) {
 				return;
 			}
-			for (i = 1 + rand()%5;i>0;i--) {
+			for (i = 1 + rand() % 5; i > 0; i--) {
 			fin >> slovo;
 			}
 			fin.close();
@@ -322,7 +325,7 @@ void Testing_main(int theme)
 			if (!fin.is_open()) {
 				return;
 			}
-			for (i = 1 + rand()%5;i>0;i--) {
+			for (i = 1 + rand() % 5 ; i > 0; i--) {
 				fin >> slovo;
 			}
 			fin.close();
@@ -335,7 +338,7 @@ void Testing_main(int theme)
 			if (!fin.is_open()) {
 				return;
 			}
-			for (i = 1 + rand()%5;i>0;i--) {
+			for (i = 1 + rand() % 5 ; i > 0; i--) {
 				fin >> slovo;
 			}
 			fin.close();
@@ -348,7 +351,7 @@ void Testing_main(int theme)
 			if (!fin.is_open()) {
 				return;
 			}
-			for (i = 1 + rand()%5;i>0;i--) {
+			for (i = 1 + rand() % 5 ; i > 0; i--) {
 				fin >> slovo;
 			}
 			fin.close();
