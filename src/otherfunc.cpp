@@ -113,11 +113,12 @@ void Game(char slovo[], int dl)
 	int i, chelov = 0,kol;
 	SHORT x_cons;
 	int flag = 0;
-	char A[]="abcdefghijklmnopqrstuvwxyz";
+	COORD wr_word = { 11, 19 };
+	char A[] = "abcdefghijklmnopqrstuvwxyz";
 	kol = strlen(A);
 	int *C = new int [kol];
 	int *B = new int [kol];
-	for (i = 0;i < kol;i++) {
+	for (i = 0; i < kol; i++) {
 		B[i] = 1;
 		C[i] = 1;
 	}
@@ -127,6 +128,7 @@ void Game(char slovo[], int dl)
 	Man_0();
 	PrintSuares(dl);
 	while (1) {
+		SetConsoleCursorPosition(hConsole, wr_word);
 		cout << "Wrong letters: ";
 		for (i = 0; i < kol; i++) {
 			if (B[i] == 0) {
