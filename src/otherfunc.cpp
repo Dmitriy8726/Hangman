@@ -160,7 +160,37 @@ void WinMenu()
 
 void LoseMenu()
 {
-	
+	int ch = 0, vibor = 0;;
+	system("cls");
+	while (ch != 13) {
+		switch (vibor) {
+			case 0:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouLose();
+				WinLoseMenu_1();
+				break;
+			}
+			case 1:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouLose();
+				WinLoseMenu_2();
+				break;
+			}
+		}
+		ch = getch();
+		if(ch == 72){
+			vibor--;
+		}
+		if(vibor < 0){
+			vibor = 1;
+		}
+		if(ch == 80){
+			vibor++;
+		}
+		if(vibor > 1){
+			vibor = 0;
+		}
+	}
 	
 }
 
@@ -186,6 +216,9 @@ void Game(char slovo[], int dl)
 	while (1) {
 		if (win == dl) {
 			WinMenu();
+		}
+		if (chelov == 6) {
+			LoseMenu();
 		}
 		SetConsoleCursorPosition(hConsole, wr_word);
 		cout << "Wrong letters: ";
