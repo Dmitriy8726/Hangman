@@ -13,7 +13,7 @@ int main()
 	SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 	system("mode con cols=120 lines=30");
-	int sel = 0, ch = 0;
+	int sel = 0, ch = 0, h = 0;
 	while (sel != 2) {
 		system("color 0f");
 		while (ch != 13) {
@@ -46,13 +46,22 @@ int main()
 				sel = 0;
 			}
 		}
+		ch = 0;
 		if (sel == 0) {
 			Testing_main(Select_Theme());
+		}
+		if (sel == 1) {
+			h = 0;
+			system("cls");
+			while(h != 13) {
+				Intro();
+				Help();
+				h = getch();
+			}
 		}
 		if (sel == 2) {
 			return 0;
 		}
 		sel = 0;
-		ch = 0;
 	}
 }

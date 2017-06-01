@@ -91,6 +91,23 @@ void Main_Menu_2()
 	cout << "                                                                                                                      " << endl;
 }
 
+void Help()
+{
+	cout << "                                                                                                                      " << endl;
+	cout << "                                               How play in this game!                                                 " << endl;
+	cout << "                                                                                                                      " << endl;
+	cout << "                   1)Select theme.                                                                                    " << endl;
+	cout << "                   2)Try to understand which word is enigmatic and enter letters one by one.                          " << endl;
+	cout << "                   3)Good luck!                                                                                       " << endl;
+	cout << "                                                                                                                      " << endl;
+	cout << "                                                                                                                      " << endl;
+	cout << "                                                                                                                      " << endl;
+	cout << "                                                                                                                      " << endl;
+	cout << "                                                                                                                      " << endl;
+	cout << "                          Developers: Mitryakov Denis, Plotnikov Aleksndar, Chistov Dmitrii.                          " << endl;
+	cout << "                                                                                                                      " << endl;
+}
+
 void Main_Menu_3()
 {
 	cout << "                                                                                                                      " << endl;

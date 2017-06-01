@@ -41,4 +41,6 @@ void Man_5();
 
 void Man_6();
 
+void Help();
+
 #endif
