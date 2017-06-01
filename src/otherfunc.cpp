@@ -72,10 +72,15 @@ int Select_Theme()
 	return theme;
 }
 
-int Proverka(char letter)
+int Proverka(char &letter)
 {
-	if ((isalpha(letter)) && (islower(letter)) ) {
-		return 1;
+	if (isalpha(letter)) {
+			if (islower(letter)) {
+				return 1;
+			} else {
+				letter = tolower(letter);
+				return 1;
+			}
 	} else {
 		return 0;
 	}
@@ -105,19 +110,34 @@ void PrintSuares(int dl)
 
 void Game(char slovo[], int dl)
 {
-	int i, chelov = 0;
+	int i, chelov = 0,kol;
 	SHORT x_cons;
 	int flag = 0;
+	char A[]="abcdefghijklmnopqrstuvwxyz";
+	kol = strlen(A);
+	int *C = new int [kol];
+	int *B = new int [kol];
+	for (i = 0;i < kol;i++) {
+		B[i] = 1;
+		C[i] = 1;
+	}
 	char letter;
 	system ("CLS");
 	SetConsoleCursorPosition(hConsole, zero);
 	Man_0();
 	PrintSuares(dl);
 	while (1) {
+		cout << "Wrong letters: ";
+		for (i = 0; i < kol; i++) {
+			if (B[i] == 0) {
+				cout << A[i] <<" ";
+			}
+		}
 		flag = 0;
 		x_cons = 20;
 		letter = getch();
 		if (Proverka(letter) == 1) {
+			//for (i = 0;i < kol 
 			for (i = 0; i < dl; i++) {
 				if (letter == slovo[i]) {
 					COORD position = { x_cons,14 };
@@ -135,6 +155,11 @@ void Game(char slovo[], int dl)
 			}
 		
 			if (flag == 0) {
+				for (i = 0;i < kol;i++) {
+					if (A[i] == letter) {
+						B[i] = 0;
+					}
+				}
 				++chelov;
 			}
 			switch (chelov) {
