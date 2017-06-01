@@ -122,6 +122,39 @@ void PrintSuares(int dl)
 
 void WinMenu()
 {
+	int ch = 0, vibor = 0;;
+	system("cls");
+	while (ch != 13) {
+		switch (vibor) {
+			case 0:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouWin();
+				WinLoseMenu_1();
+				break;
+			}
+			case 1:{
+				SetConsoleCursorPosition(hConsole, zero);
+				YouWin();
+				WinLoseMenu_2();
+				break;
+			}
+		}
+		ch = getch();
+		if(ch == 72){
+			vibor--;
+		}
+		if(vibor < 0){
+			vibor = 1;
+		}
+		if(ch == 80){
+			vibor++;
+		}
+		if(vibor > 1){
+			vibor = 0;
+		}
+	}
+	
+	
 	
 }
 
@@ -151,6 +184,9 @@ void Game(char slovo[], int dl)
 	Man_0();
 	PrintSuares(dl);
 	while (1) {
+		if (win == dl) {
+			WinMenu();
+		}
 		SetConsoleCursorPosition(hConsole, wr_word);
 		cout << "Wrong letters: ";
 		for (i = 0; i < kol; i++) {
