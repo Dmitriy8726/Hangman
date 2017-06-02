@@ -36,3 +36,16 @@ CTEST(Test_4, Language_1)
 	
     ASSERT_EQUAL(expected, result);
 }
+
+CTEST(Test_Povror1, Letter_a)
+{
+	char A[] ="abc";
+	
+	int C[] = {1, 1, 1};
+	
+	int result = Povtor('a', C, 3, A);
+	
+	int expected = 1;
+	
+	ASSERT_EQUAL(expected, result);
+}
