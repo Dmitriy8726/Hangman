@@ -1,5 +1,5 @@
 #include <ctest.h>
-#include <../src/otherfunc.h>
+#include <../test/otherfunc2.h>
 
 CTEST(Test_one, Language)
 {
