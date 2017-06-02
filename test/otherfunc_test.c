@@ -19,18 +19,18 @@ CTEST(Test_2, Language_H)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(Test_3, Language_p)
+CTEST(Test_3, Language_znak)
 {
-    int result = Proverka('р');
+    int result = Proverka('!');
 	
     int expected = 1;
 	
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(Test_4, Language_P)
+CTEST(Test_4, Language_1)
 {
-    int result = Proverka('Р');
+    int result = Proverka('1');
 	
     int expected = 1;
 	
