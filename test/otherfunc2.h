@@ -1,7 +1,6 @@
 #ifndef OTHERFUNC2_H
 #define OTHERFUNC2_H
 
-#include <conio.h>
 #include <stdlib.h>
 #include <ctype.h> 
 #include <stdio.h>
